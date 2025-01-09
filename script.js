@@ -1,15 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    const matrixEffect = document.getElementById('matrixEffect'); // Get the container
+    const matrixEffect = document.getElementById('matrixEffect');
 
     if (matrixEffect) {
-        matrixEffect.appendChild(canvas); // Append the canvas only if the container exists
+        matrixEffect.appendChild(canvas);
     } else {
         console.error('Matrix effect container not found!');
-        return; // Stop execution if the container isn't found
+        return;
     }
 
+    // Set canvas dimensions
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const columns = canvas.width / fontSize;
     const drops = Array.from({ length: columns }).fill(0);
 
+    // Function to draw the matrix effect
     function drawMatrix() {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
