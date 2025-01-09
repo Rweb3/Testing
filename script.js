@@ -94,11 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const checkWinCondition = () => {
-        if (currentPattern.join('') === targetPattern.join('')) {
-            alert('Congratulations! You solved the puzzle!');
-            window.location.href = 'main.html';
-        }
-    };
+    if (currentPattern.join('') === targetPattern.join('')) {
+        alert('Congratulations! You solved the puzzle!');
+        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Replace with your desired YouTube video URL
+    }
+};
+
 
     const shuffleHexagons = () => {
         targetPattern = generatePattern();
